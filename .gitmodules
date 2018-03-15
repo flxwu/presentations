@@ -1,6 +1,6 @@
 [submodule "crash-course-react"]
 	path = crash-course-react
-	url = git@github.com:flxwu/crash-course-react.git
+	url = https://github.com/flxwu/crash-course-react.git
 [submodule "firebase-101"]
 	path = firebase-101
-	url = git@github.com:flxwu/firebase-101.git
+	url = https://github.com/flxwu/firebase-101.git
