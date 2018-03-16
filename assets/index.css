@@ -1,0 +1,39 @@
+.container {
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.row {
+    width: 65rem;
+}
+
+.card-left {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-left: auto;
+    height: 30rem;
+}
+
+.card-right {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-right: auto;
+    height: 30rem;
+}
+
+img {
+    height: 18rem;
+}
+
+.link {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+}
+
+a {
+    position: relative;
+    left: -50%;
+}
