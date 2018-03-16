@@ -1,0 +1,12 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "description": "A Collection of my Presentations",
+  "main": "index.js",
+  "repository": "git@github.com:flxwu/presentations.git",
+  "author": "Felix Wu <mail@flxwu.com> (http://flxwu.com)",
+  "license": "MIT",
+  "dependencies": {
+    "pug": "^2.0.1"
+  }
+}
