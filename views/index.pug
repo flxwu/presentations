@@ -1,0 +1,26 @@
+html
+  head
+    title Felix Wu's Presentations
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css", media='screen,projection')
+    link(rel="stylesheet", href="./static/index.css")
+    link(rel="shortcut icon", href="./static/favicon.png", type="image/x-icon")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  body
+    .container
+      .row
+        - let counter = 1
+        for pres in data
+          .col.s12.m6
+            .card.card-right
+              .card-image
+                img(src=`./static/screenshot-${counter}.png`, alt=`${pres.title} Screenshot`)
+              .card-content
+                h5= pres.title       
+                p= pres.desc  
+                br
+                .link
+                  a(href= pres.link) Link to presentation   
+          - counter++;
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js")
+    
