@@ -3,25 +3,38 @@ html
     title Felix Wu's Presentations
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css", media='screen,projection')
-    link(rel="stylesheet", href="./static/index.css")
-    link(rel="shortcut icon", href="./static/favicon.png", type="image/x-icon")
+    link(rel="stylesheet", href="../assets/index.css")
+    link(rel="shortcut icon", href="../assets/favicon.png", type="image/x-icon")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
   body
+    - var data = [
+    -          [{
+    -                  title: 'Firebase 101',
+    -                  desc: 'A Crash Course on Google\'s Cloud Computing Service Firebase',
+    -                  link: 'http://presentations.flxwu.com/firebase101'
+    -              },
+    -              {
+    -                  title: 'Crash Course Git',
+    -                  desc: 'A Quick Introduction to modern Version Control using Git and Github.',
+    -                  link: 'https://docs.google.com/presentation/d/1ue9GwJ9vSOf7HqejuaOvVJJVqGP3PWph_pXw6UQjM/edit?usp=sharing'
+    -              }
+    -          ],
+    -      ];
     .container
-    - let counter = 1
-    for presrow in data
-      .row
-        for pres in presrow
-          .col.s12.m6
-            .card.card-right
-              .card-image
-                img(src=`./static/screenshot-${counter}.png`, alt=`${pres.title} Screenshot`)
-              .card-content
-                h5= pres.title       
-                p= pres.desc  
-                br
-                .link
-                  a(href= pres.link) Link to presentation   
-          - counter++;
+      - let counter = 1
+      for presrow in data
+        .row
+          for pres in presrow
+            .col.s12.m6
+              .card.card-right
+                .card-image
+                  img(src=`../assets/screenshot-${counter}.png`, alt=`${pres.title} Screenshot`)
+                .card-content
+                  h5= pres.title       
+                  p= pres.desc  
+                  br
+                  .link
+                    a(href= pres.link) Link to presentation   
+            - counter++;
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js")
     

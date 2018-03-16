@@ -4,7 +4,8 @@
   "description": "A Collection of my Presentations",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "compile": "pug views/index.pug -o ."
   },
   "repository": "git@github.com:flxwu/presentations.git",
   "author": "Felix Wu <mail@flxwu.com> (http://flxwu.com)",
