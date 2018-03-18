@@ -8,23 +8,34 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
   body
     main
-      - var data=[[{title:'Firebase 101',desc:'A Crash Course on Google\'s Cloud Computing Service Firebase',link:'http://presentations.flxwu.com/firebase-101'},{title:'Crash Course Git',desc:'A Quick Introduction to modern Version Control using Git and Github.',link:'https://docs.google.com/presentation/d/1ue9GwJ9vSOf7HqejuaOvVJJVqGP3PWph_pXw6UQjM/edit?usp=sharing'}]];
-        .container
-        - let counter = 1
-        for presrow in data
-          .row
-            for pres in presrow
-              .col.s12.m6
-                .card.card-right
-                  .card-image
-                    img(src=`./assets/screenshot-${counter}.png`, alt=`${pres.title} Screenshot`)
-                  .card-content
-                    h5= pres.title       
-                    p= pres.desc  
-                    br
-                    .link
-                      a(href= pres.link) Link to presentation   
-              - counter++;
+      -
+        var data = [
+            [{
+                title: 'Firebase 101',
+                desc: 'A Crash Course on Google\'s Cloud Computing Service Firebase',
+                link: 'http://presentations.flxwu.com/firebase-101'
+            }, {
+                title: 'Crash Course Git',
+                desc: 'A Quick Introduction to modern Version Control using Git and Github.',
+                link: 'https://docs.google.com/presentation/d/1ue9GwJ9vSO-f7Hqeju-aOvVJJVqGP3PWph_pXw6UQjM/edit?usp=sharing'
+            }]
+        ];
+      .container
+      - let counter = 1
+      for presrow in data
+        .row
+          for pres in presrow
+            .col.s12.m6
+              .card.card-right
+                .card-image
+                  img(src=`./assets/screenshot-${counter}.png`, alt=`${pres.title} Screenshot`)
+                .card-content
+                  h5= pres.title       
+                  p= pres.desc  
+                  br
+                  .link
+                    a(href= pres.link) Link to presentation   
+            - counter++;
     footer
       h6
         p.grey-text Built with #[a(href='https://pugjs.org') Pug(Jade)] and #[a(href='https://expressjs.com/') Express], hosted on #[a(href='https://github.com/flxwu/presentations/') Github Pages]
