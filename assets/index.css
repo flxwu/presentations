@@ -8,6 +8,18 @@ main {
     flex: 1 0 auto;
 }
 
+main .subtitle {
+    margin-top: -2rem !important;
+    width:75%; 
+    margin:0 auto;
+    text-style: italic;
+    font-weight: bold;
+}
+
+main ol {
+    margin: auto;
+}
+
 main .container {
     align-items: center;
     padding-top: 2rem;
