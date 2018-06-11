@@ -14,7 +14,7 @@ main .container {
 }
 
 main .row {
-    width: 65rem;
+    width: 100vw;
 }
 
 .card-left {
