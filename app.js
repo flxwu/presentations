@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.set('views', './views');
+app.set('views', '.');
 app.set('view engine', 'pug');
 
-app.use('/static', express.static(path.join(__dirname, '/assets')))
+app.use('/assets', express.static(path.join(__dirname, '/assets')))
 
 app.get('/', function (req, res) {
     res.render('index', {
@@ -20,7 +20,11 @@ app.get('/', function (req, res) {
                     title: 'Crash Course Git',
                     desc: 'A Quick Introduction to modern Version Control using Git and Github.',
                     link: 'https://docs.google.com/presentation/d/1ue9GwJ9vSOf7HqejuaOvVJJVqGP3PWph_pXw6UQjM/edit?usp=sharing'
-                }
+                },{
+                title: 'Get Into Open Source!',
+                desc: 'How to Start or Do More In The OSS Community',
+                link: 'https://slides.com/flxwu/get-into-open-source'
+            }
             ],
         ]
     });

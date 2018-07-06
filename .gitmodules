@@ -4,6 +4,3 @@
 [submodule "firebase-101"]
 	path = firebase-101
 	url = https://github.com/flxwu/firebase-101.git
-[submodule "get-into-open-source"]
-	path = get-into-open-source
-	url = https://github.com/flxwu/get-into-open-source.git
